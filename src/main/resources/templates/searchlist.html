@@ -17,13 +17,15 @@
     <thead>
     <tr>
       <th>노래제목</th>
-      <th>가수이름</th><!-- sssssssssssssssssssssssss-->
+      <th>가수이름</th>
+      <th>url</th>
     </tr>
     </thead>
     <tbody>
     <tr th:each="track : ${tracks}">
       <td th:text="${track.name}"></td>
       <td th:text="${track.artist}"></td>
+      <td><a th:href="${track.url}" th:text="${track.url}"></a></td>
     </tr>
     </tbody>
   </table>
