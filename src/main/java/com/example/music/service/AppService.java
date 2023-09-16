@@ -1,12 +1,14 @@
 package com.example.music.service;
 
 import com.example.music.dto.Track;
+import com.example.music.repository.MusicRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -16,6 +18,9 @@ import java.util.List;
 
 @Service
 public class AppService {
+
+    @Autowired
+    private MusicRepository musicRepository;
 
     public static ResponseEntity<String> search(String trackName) throws JsonProcessingException {
 
