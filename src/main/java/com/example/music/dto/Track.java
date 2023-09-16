@@ -12,4 +12,6 @@ public class Track {
     private String name;
     @JsonProperty("artist")
     private String artist;
+    @JsonProperty("url")
+    private String url;
 }
